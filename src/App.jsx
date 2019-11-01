@@ -16,11 +16,15 @@ class App extends Component {
     };
 
     async componentDidMount() {
-        const res = await axios.get("https://panjs.com/ywc.json");
-
-        const { navbarItems, duration, detail, condition } = res.data;
-
-        this.setState({ navbarItems, duration, detail, condition });
+        axios
+            .get("https://panjs.com/ywc.json")
+            .then(res => {
+                const { navbarItems, duration, detail, condition } = res.data;
+                this.setState({ navbarItems, duration, detail, condition });
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 
     handleClick = e => {
@@ -73,13 +77,16 @@ class App extends Component {
                         ""
                     )}
                 </div>
-                <div className="header-banner row">
+                <div className="header-banner row no-gutters">
                     <div className="col-4 cover-left"></div>
-                    <div className="col-4 cover-center d-flex align-items-center">
-                        <img
-                            src={require("./assets/banner.png")}
-                            className="banner"
-                        ></img>
+
+                    <div className="col-4 cover-center ">
+                        <div className="row h-100 justify-content-center align-items-center">
+                            <img
+                                src={require("./assets/banner.png")}
+                                className="banner"
+                            ></img>
+                        </div>
                     </div>
                     <div className="col-4 cover-right "></div>
                 </div>

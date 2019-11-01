@@ -8,6 +8,11 @@
     src: url(./assets/fonts/TATSanaSuksa-Regular.woff2);
 }
 
+@font-face {
+    font-family: TATSanaChon;
+    src: url(./assets/fonts/TATSanaChon-Regular.woff2);
+}
+
 .header {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     top: 0;
@@ -68,13 +73,12 @@
     padding: 14px 15px;
     font-family: TATSanaChon;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .header-element a {
     text-decoration: none !important;
     color: #333333;
-    font-weight: bold;
+
     background-color: transparent;
     cursor: pointer;
     position: relative;
@@ -292,6 +296,7 @@
 .head {
     color: red;
     margin: 15px 0px 10px 0px;
+    font-family: TATSanaSuksa;
 }
 
 .footer-2 {
@@ -305,12 +310,16 @@
 
 .copyright {
     padding: 0.5rem 2rem !important;
+    font-size: 12px;
+    font-family: TATSanaChonBold;
 }
 .container {
     padding: 0px 30px !important;
 }
 .footer-element {
     padding: 0.5rem 2rem !important;
+    font-size: 12px;
+    font-family: TATSanaChonBold;
 }
 
 .detail {
